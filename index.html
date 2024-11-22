@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tareas Mejorada</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Lista de Tareas</h1>
+        <div class="task-input">
+            <input type="text" id="taskInput" placeholder="Agregar nueva tarea">
+            <select id="priorityInput">
+                <option value="Alta">Alta</option>
+                <option value="Media" selected>Media</option>
+                <option value="Baja">Baja</option>
+            </select>
+            <button id="addTaskButton">Agregar Tarea</button>
+        </div>
+        <div>
+            <button onclick="sortTasks('prioridad')">Ordenar por Prioridad</button>
+            <button onclick="sortTasks('fecha')">Ordenar por Fecha</button>
+        </div>
+        <ul id="taskList"></ul>
+        <h2>Tareas Completadas</h2>
+        <ul id="completedList"></ul>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
